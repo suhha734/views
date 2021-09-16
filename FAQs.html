@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/Welcome-page">Welcome-page</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/Welcome-page/Frequently-asked-questions">Frequently-asked-questions</a></li>
+  </div>
+</nav>
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        FAQs (Frequently Asked Questions)
+      </h1>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">About the COVID-19 Virus</a>
+        </h2>
+        <p class="nhsuk-card__description"> A quick introduction to the COVID-19 Virus. </p>
+        <p class="nhsuk-card__description">Symptoms to look out for to get tested.</p>
+      </div>
+    </div>
+  </li>
+<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+  <div class="nhsuk-card__content">
+    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+      <a class="nhsuk-card__link" href="#">About the Vaccine</a>
+    </h2>
+    <p class="nhsuk-card__description">Advice on getting the vaccine in specific situations and symptoms to look out for. </p>
+      <p class="nhsuk-card__description">  Information about the vaccine and its safety.</p>
+  </div>
+</div>
+</li>
+ <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+<div class="nhsuk-card nhsuk-card--clickable">
+  <div class="nhsuk-card__content">
+    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+      <a class="nhsuk-card__link" href="#">About your appointment</a>
+    </h2>
+    <p class="nhsuk-card__description">What to expect on the day of your vaccine appointment. </p>
+    <p class="nhsuk-card__description"> When to change your appointment.</p>
+  </div>
+</div>
+</li>
+ <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+<div class="nhsuk-card nhsuk-card--clickable">
+  <div class="nhsuk-card__content">
+    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+      <a class="nhsuk-card__link" href="#">After your appointment</a>
+    </h2>
+    <p class="nhsuk-card__description">Symptoms after getting the vaccine. </p>
+    <p class="nhsuk-card__description">  Where to get help if you have concerns.</p>
+  </div>
+</div>
+</li>
+</ul>
+<p>
+        Visit the
+          <a href="https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus">Ministry of Health website</a>
+        for more information.
+</p>
+    <div>
+      <button href="/welcome-page" class="nhsuk-button">
+    Return to Booking
+  </button>
+    </div>
+
+  </div>
+{% endblock %}

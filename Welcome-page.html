@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Start page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        COVID Booking App
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul>
+        <li>book for yourself</li>
+        <li>book for somebody else</li>
+        <li>book for multiple people</li>
+      </ul>
+
+      <p>Booking your vaccine takes around 5 minutes.</p>
+
+
+      <h2 class="nhsuk-heading-m">Before you start</h2>
+
+      <p>You can only use this service if you live in the NZ.</p>
+
+      <a href="/templates/question-page" class="nhsuk-button">
+        Start now
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

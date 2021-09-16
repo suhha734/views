@@ -1,0 +1,134 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one">Welcome-page</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">Frequently-asked-questions</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two/level-three">About your vaccine appointment</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+  </div>
+</nav>
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <h1>
+        About your vaccine appointment
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p class="nhsuk-lede-text">
+        This page incudes information about what to expect on the day of your vaccine appointment and when to change your appointment time.
+      </p>
+
+      <p>
+        For more information about specific situations and health conditions and getting the COVID vaccine, see
+        <a href="https://service-manual.nhs.uk/design-system">About the Vaccine</a>.
+      </p>
+      <h2>What will happen at your appointment</h2>
+
+      <h3>
+      When you get there
+      </h3>
+
+      <p>
+        A healthcare worker will talk you through what is going to happen.
+  <p>  You will be asked:
+      </p>
+
+      <ul>
+        <li>
+          for your name, date of birth and physical address so we can verify this in the COVID Immunisation Register (you don't need to show photo ID)
+        </li>
+        <li>
+        to give your verbal consent to receive the vaccine — this is standard practice for any vaccination.
+        </li>
+        <li>
+          if you are aged 12 to 15, you can say yes or no to getting the vaccine yourself or your parent or caregiver can provide consent if you prefer
+        </li>
+      </ul>
+
+      <h3>
+    Getting the vaccination
+      </h3>
+<p>
+  A fully trained vaccinator will give you the vaccine in your upper arm.
+  </p>
+  <h3>
+After receiving your vaccination
+  </h3>
+<p>
+  You will need to stay for at least 15 minutes after your vaccination so we can make sure you are okay.
+  <p> We will record information about your COVID-19 immunisations in our COVID Immunisation Register (CIR), including the batch number. You will be given a card that shows the date you have been vaccinated.
+    </p>
+    <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>If you are unwell on the day of your appointment, you will need to reschedule it. You can be vaccinated once you are well again. See <a href="https://yellowcard.mhra.gov.uk/" title="External website">About the Vaccine</a> for more details.</p>
+</div>
+
+      <div class="nhsuk-care-card nhsuk-care-card--non-urgent">
+    <div class="nhsuk-care-card__heading-container">
+      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP or call Healthline if:</span></h3>
+      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-care-card__content">
+
+      <ul>
+        <li>you are not sure whether or not you should cancel your vaccine booking</li>
+        <li>if you have a symptom that is not listed above and you are unsure whether you should change your booking</li>
+        <li>you have a specific condition or situation that is not specified and you are unsure whether you could receive the vaccine</li>
+      </ul>
+    </div>
+  </div>
+      <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="#">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back to FAQs</a>
+</div>
+    </p>
+    <button class="nhsuk-button" type="submit">
+  Return to Booking
+  </button>
+  </div>
+
+      <!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}

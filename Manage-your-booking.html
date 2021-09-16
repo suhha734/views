@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Manage your bookings
+      </h1>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+        <h3>  Enter your booking code </h3>
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Your booking code is a 5 digit number that you can find on your booking confirmation email or text message.
+        </div>
+        <input class="nhsuk-input nhsuk-input--width-10" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric">
+      </div>
+<p>
+<h3> OR </h3>
+</p>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+  <h3>  First name </h3>
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+  <h3>  Last name </h3>
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example-with-hint-text">
+<h3>  Date of Birth </h3>
+  </label>
+  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    Please enter in the format DD/MM/YYYY
+  </div>
+  <input class="nhsuk-input nhsuk-input--width-10" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric">
+</div>
+<p>
+<a href="/templates/question-page" class="nhsuk-button">
+  Change booking
+</a>
+</p>
+    </div>
+  </div>
+{% endblock %}
